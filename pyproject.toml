@@ -13,6 +13,7 @@ keywords = ["bot", "speedybot", "adaptive cards"]
 [tool.poetry.dependencies]
 python = "^3.9"
 requests = "^2.31.0"
+webexteamssdk = "1.6.1"
 
 [build-system]
 requires = ["poetry-core"]

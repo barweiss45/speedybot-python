@@ -1,7 +1,8 @@
 import requests
 import json
-from .SpeedyCard import SpeedyCard
+from .speedycard import SpeedyCard
 from typing import NamedTuple
+from webexteamssdk import WebexTeamsAPI
 
 
 class MessageResponse(NamedTuple):
@@ -17,8 +18,9 @@ class MessageResponse(NamedTuple):
     created: str
 
 
-class SpeedyBot:
+class SpeedyBot(WebexTeamsAPI):
     def __init__(self, token: str, make_request=requests.request):
+        super().__init__(access_token=token)
         self.token = token
         self.middlewares = []
         self.top_middleware = None
