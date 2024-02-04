@@ -1,4 +1,7 @@
-from .SpeedyCard import SpeedyCard
-from .SpeedyBot import SpeedyBot
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-# ⬆️ Trick to get nice imports (ie no SpeedyBot.SpeedyBot() junk)
+from .speedycard import SpeedyCard
+from .speedybot import speedybot
+
+__all__ = ['SpeedyCard', 'speedybot']
